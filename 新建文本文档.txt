@@ -1,0 +1,13 @@
+$wg("https://way.jd.com/he/freeweather?city=沂水县&appkey=0946e52b883b1e9e8cc1471db5dcfce2
+", json,.result.HeWeather5.basic.city)$
+城市：.result.HeWeather5[0].basic.city
+更新时间： .result.HeWeather5[0].basic.update.loc
+
+定位：
+$wg("https://free-api.heweather.net/s6/weather/now?location=%E6%B2%82%E6%B0%B4%E5%8E%BF
+&key=cb426a5f94b24da3b3fec1c4b2b5e3b5", json,.HeWeather6[0].basic.location)$
+天气：
+$wg("https://free-api.heweather.net/s6/weather/now?location=%E6%B2%82%E6%B0%B4%E5%8E%BF
+&key=cb426a5f94b24da3b3fec1c4b2b5e3b5", json,.HeWeather6[0].basic.now.cond_txt)$
+温度：$wg("https://free-api.heweather.net/s6/weather/now?location=%E6%B2%82%E6%B0%B4%E5%8E%BF
+&key=cb426a5f94b24da3b3fec1c4b2b5e3b5", json,.HeWeather6[0].basic.now.tmp)$
